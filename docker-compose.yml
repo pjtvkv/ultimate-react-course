@@ -1,0 +1,16 @@
+services:
+  ultimate-react-course:
+    build: .
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    ports:
+      - "3000:3000"
+      - "5173:5173"
+      - "4173:4173"
+      - "8080:8080"
+    environment:
+      HOST: 0.0.0.0
+      CHOKIDAR_USEPOLLING: "true"
+    stdin_open: true
+    tty: true
